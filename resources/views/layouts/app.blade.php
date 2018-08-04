@@ -19,6 +19,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
@@ -34,8 +36,8 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="/admin/authors">Authors</a></li>
-    	                <li class="nav-item"><a class="nav-link" href="/admin/books">Books</a></li>
+                        <li class="nav-item"><a class="nav-link" href="admin/authors">Authors</a></li>
+    	                <li class="nav-item"><a class="nav-link" href="admin/books">Books</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +78,19 @@
             @yield('content')
         </main>
     </div>
+    
+
+    <!-- Jquery Scripts -->
+    <script src="{{ asset('jquery/jquery.min.js') }}" defer></script>
+
+    <!-- Datatable Js Scripts -->
+    <script src="{{ asset('datatables.net/js/jquery.dataTables.min.js') }}" defer></script>
+    
+    <!-- Datatable Bootstrap Scripts -->
+    <script src="{{ asset('css/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}" defer></script>
+
+    <!--JS Scripts -->
+    <script src="{{ asset('js/script.js') }}" defer></script>
+    
 </body>
 </html>
