@@ -76,7 +76,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-3">
                         <div class="card">
-                            <div class="card-header">Admin Controll</div>
+                            <div class="card-header">Admin Menu</div>
                             <div class="card-body">
                                 <ul class="nav navbar-nav">
                                     <li class="nav-item"><a class="nav-link" href="{{route('authors.index')}}">Authors</a></li>

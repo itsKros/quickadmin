@@ -35,10 +35,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="admin/authors">Authors</a></li>
-    	                <li class="nav-item"><a class="nav-link" href="admin/books">Books</a></li>
-                    </ul>
+                    
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">

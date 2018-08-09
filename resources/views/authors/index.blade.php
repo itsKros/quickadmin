@@ -3,10 +3,15 @@
 @section('content')
     
             <div class="col-md-9 col-md-offset-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Authors   <button id="addRow" class="btn btn-danger">Add Author</button></div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Authors List
+                            <a href="{{ route('authors.create') }}" class="btn btn-primary"  style="float: right;">Add New Author</a>
+                        </h3>
+                        
+                    </div>
 
-                    <div class="panel-body">
+                    <div class="card-body">
                         <table class="table table-bordered" id="authorsTab">
                             <thead>
                                 <tr>
