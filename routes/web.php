@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminHomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
-    Route::resource('authors', 'AuthorsController');
+    Route::resource('authors', 'AuthorsController', [
+            'names' => [
+                'index' => 'authors.index'
+            ]
+        ]) ;
     Route::resource('books', 'BooksController');
 });
