@@ -15,9 +15,9 @@ class AuthorsController extends Controller
      */
     public function index()
     {
-        $writers = Author::all();
+        $authors = Author::all();
         //$writers = Author::paginate(5);
-        return view('authors.index', compact('writers'));
+        return view('authors.index', compact('authors'));
     }
 
     /**
@@ -39,7 +39,7 @@ class AuthorsController extends Controller
     public function store(StoreAuthorRequest $request)
     {
         Author::create($request->all());
-        return redirect()->route('authors.index');
+        return redirect()->route('authors.index')->with(['message' => 'Author Added successfully']);
     }
 
     /**
@@ -61,7 +61,8 @@ class AuthorsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $author = Author::findOrFail($id);
+        return view('authors.edit', compact('author'));
     }
 
     /**
@@ -71,9 +72,14 @@ class AuthorsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreAuthorRequest $request, $id)
     {
-        //
+       
+
+        $author = Author::findOrFail($id);
+        $author->update($request->all());
+        return redirect()->route('authors.index')->with(['message' => 'Author Updated successfully']);
+
     }
 
     /**

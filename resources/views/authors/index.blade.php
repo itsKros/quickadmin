@@ -3,6 +3,9 @@
 @section('content')
     
             <div class="col-md-9 col-md-offset-3">
+                    @if (session('message'))
+                    <div class="alert alert-info">{{ session('message') }}</div>
+                @endif
                 <div class="card">
                     <div class="card-header">
                         <h3>Authors List
@@ -21,7 +24,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse($writers as $author)
+                                @forelse($authors as $author)
                                 <tr>
                                     <td>{{ $author->first_name }}</td>
                                     <td>{{ $author->last_name }}</td>

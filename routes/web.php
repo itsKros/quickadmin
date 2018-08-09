@@ -23,6 +23,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('authors', 'AuthorsController', [
             'names' => [
                 'index' => 'authors.index'
+                /* 'edit' =>'authors.edit',
+                'update' =>'authors.update' */
             ]
         ]) ;
     Route::resource('books', 'BooksController');
