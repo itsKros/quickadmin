@@ -90,6 +90,8 @@ class AuthorsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $author = Author::findOrFail($id);
+        $author->delete();
+        return redirect()->route('authors.index')->with(['message' => 'Author Deleted successfully']);
     }
 }
